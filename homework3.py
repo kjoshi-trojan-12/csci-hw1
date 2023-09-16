@@ -2,6 +2,8 @@
 from queue import PriorityQueue
 import queue
 from operator import attrgetter
+import random
+
 
 
 
@@ -30,7 +32,7 @@ class Node:
 
 class Individual:
     def __init__(self, chromosome):
-        self.chromosome = chromosome
+        self.chromosome = chromosome #sequence of genes (objects)
         self.fitness = self.calculate_fitness()
 
     def mutated_genes(self):
@@ -139,6 +141,7 @@ def crossover(parent1: list, parent2: list, start_index: int, end_index: int):
     return child
 
 #Mutation function: mutates a child
+#Parameters: child
 
 
 #Read a file:
