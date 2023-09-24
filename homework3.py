@@ -15,10 +15,8 @@ import pandas as pd
 num_cities = 0 #Number of cities
 rank_list = [] #List of tuples that contain the index [0] and fitness value [1] of each individual
 population = [] #List of paths (a permutation of cities)
-INPUT_FILE = "input_2.txt"
+INPUT_FILE = "input_1.txt"
 cities = [] #List of cities
-start_location = None #Starting location (city)
-end_location = None #Ending location (city)
 #Hyperparameters
 pop_size = 100 #Population size
 MAX_GENERATIONS = 30 #Maximum number of generations to run the algorithm for
@@ -250,7 +248,6 @@ def read_file_to_city_list(file_name: str):
             x, y, z = int(line[0]), int(line[1]), int(line[2])
             city = City("City " + str(i), None, "Walk to", x, y, z)
             cities.append(city)
-    cities.append(end_location) #add the end location to the list of cities
     return cities
 
 #Generate rank list: generates a list of tuples that contain the index [0] and 
