@@ -276,6 +276,8 @@ def write_output_to_file(path: list):
         file.write(str(rank_list[0][1].distance) + "\n")
         for city in path:
             file.write(str(city.x) + " " + str(city.y) + " " + str(city.z) + "\n")
+        first_and_last_city = path[0]
+        file.write(str(first_and_last_city.x) + " " + str(first_and_last_city.y) + " " + str(first_and_last_city.z) + "\n")
 
 
 def main():    
